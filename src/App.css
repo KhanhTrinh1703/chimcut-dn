@@ -1,5 +1,20 @@
+
+
+.chimcut {
+  height: 100%;
+}
+
+.h-100p {
+  height: 100%;
+}
+
+.h-50p {
+  height: 50%;
+}
+
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .App-logo {
@@ -27,6 +42,8 @@
 .App-link {
   color: #61dafb;
 }
+
+
 
 @keyframes App-logo-spin {
   from {

@@ -48,9 +48,15 @@ function PersonComponent(props) {
     let secondRemaining = Math.floor( ((remaining - (dayRemaining * MILI_PER_DAY) - (hourRemaining * MILI_PER_HOUR) - (minuteRemaining * MILI_PER_MINUTE)) / MILI_PER_SECOND));
     //
     setDayLeft(dayRemaining);
-    setHourLeft(hourRemaining);
-    setMinuteLeft(minuteRemaining);
-    setSecondLeft(secondRemaining);
+    setHourLeft(formatDisplayNumber(hourRemaining));
+    setMinuteLeft(formatDisplayNumber(minuteRemaining));
+    setSecondLeft(formatDisplayNumber(secondRemaining));
+  }
+
+  function formatDisplayNumber(str){
+    if(!str) return "";
+    let newStr = `0${str}`.slice(-2);
+    return newStr;
   }
   
   return (

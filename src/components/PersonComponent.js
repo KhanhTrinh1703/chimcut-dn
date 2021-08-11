@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Fragment } from 'react'
 import '../styles/PersonComponent.css'
 import PropTypes from 'prop-types'
 import moment from 'moment'
+import * as IMAGE from '../images/image.js'
 
 PersonComponent.propTypes = {
   name: PropTypes.string,
@@ -20,16 +21,11 @@ function PersonComponent(props) {
 
   const [dayLeft, setDayLeft] = useState(null)
   const [hourLeft, setHourLeft] = useState(null)
-  const [minuteLeft, setMinuteLeft] =
-    useState(null)
-  const [secondLeft, setSecondLeft] =
-    useState(null)
+  const [minuteLeft, setMinuteLeft] = useState(null)
+  const [secondLeft, setSecondLeft] = useState(null)
 
   useEffect(() => {
-    var timer = setInterval(
-      () => countDown(),
-      1000
-    )
+    var timer = setInterval(() => countDown(), 1000)
     return function clearTimer() {
       clearInterval(timer)
     }
@@ -45,12 +41,9 @@ function PersonComponent(props) {
     let currentTime = moment()
     let remaining = target.diff(currentTime)
     //
-    let dayRemaining = Math.floor(
-      remaining / MILI_PER_DAY
-    )
+    let dayRemaining = Math.floor(remaining / MILI_PER_DAY)
     let hourRemaining = Math.floor(
-      (remaining - dayRemaining * MILI_PER_DAY) /
-        MILI_PER_HOUR
+      (remaining - dayRemaining * MILI_PER_DAY) / MILI_PER_HOUR
     )
     let minuteRemaining = Math.floor(
       (remaining -
@@ -67,15 +60,9 @@ function PersonComponent(props) {
     )
     //
     setDayLeft(dayRemaining)
-    setHourLeft(
-      formatDisplayNumber(hourRemaining)
-    )
-    setMinuteLeft(
-      formatDisplayNumber(minuteRemaining)
-    )
-    setSecondLeft(
-      formatDisplayNumber(secondRemaining)
-    )
+    setHourLeft(formatDisplayNumber(hourRemaining))
+    setMinuteLeft(formatDisplayNumber(minuteRemaining))
+    setSecondLeft(formatDisplayNumber(secondRemaining))
   }
 
   function formatDisplayNumber(str) {
@@ -85,23 +72,20 @@ function PersonComponent(props) {
   }
 
   return (
-    <>
-      <div className="person">
-        <div>
-          <div className="avatar">
-            <img src={avatar} alt={'avatar'} />
-          </div>
-          <div className="name">
-            <p>{name}</p>
-          </div>
-          <div className="time-group">
-            <p>Còn</p>
-            <p>{`${dayLeft} ngày ${hourLeft} giờ ${minuteLeft} phút ${secondLeft} giây`}</p>
-            <p>chim cút</p>
-          </div>
-        </div>
+    <Fragment>
+      <div className="flex-col min-w-1/2 p-8 m-2 bg-gradient-to-r from-indigo-400 to-blue-200 rounded">
+        <img src={avatar} alt={avatar} className="w-32 h-32 rounded-full" />
+        <p className="uppercase text-xl">{name}</p>
+        <p>Xao lonist</p>
+        <p>Phone number: </p>
+        <p>Current place:</p>
+        <p>
+          Còn
+          {` ${dayLeft} ngày ${hourLeft} giờ ${minuteLeft} phút ${secondLeft} giây `}
+          chim cut
+        </p>
       </div>
-    </>
+    </Fragment>
   )
 }
 

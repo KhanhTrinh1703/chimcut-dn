@@ -5,20 +5,17 @@ import ChatPopupComponent from './ChatPopupComponent'
 
 function ChimCutComponent() {
   return (
-    <div className="container-fluid chimcut">
-      <div className="row h-100p">
+    <div className="container mx-auto xl flex h-screen justify-center py-8">
+      <div className="flex flex-wrap justify-center">
         {personInfo.map((item) => (
-          <div className="col-6 h-50p p-0">
-            <PersonComponent
-              name={item?.name}
-              key={item?.id}
-              avatar={item?.avatar}
-              time={item?.endTime}
-            />
-          </div>
+          <PersonComponent
+            name={item?.name}
+            key={item?.id}
+            avatar={item?.avatar}
+            time={item?.endTime}
+          />
         ))}
       </div>
-      <ChatPopupComponent />
     </div>
   )
 }

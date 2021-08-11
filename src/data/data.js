@@ -10,7 +10,7 @@ const personInfo = [
   {
     id: '2',
     name: 'Minh Toàn',
-    endTime: '2022/02/01 00:00:00',
+    endTime: '2022/02/10 00:00:00',
     avatar: IMAGE?.MT,
   },
   {

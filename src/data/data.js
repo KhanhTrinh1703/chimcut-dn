@@ -4,7 +4,7 @@ const personInfo = [
   {
     id: "1",
     name: "Minh Nhật",
-    endTime: "2023/02/01 00:00:00",
+    endTime: "2023/01/15 00:00:00",
     avatar: IMAGE?.MN
   },
   {

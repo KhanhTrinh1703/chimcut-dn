@@ -1,0 +1,6 @@
+.wrapper {
+  @apply w-full 
+    h-screen 
+    bg-black-dark 
+    font-serif;
+}

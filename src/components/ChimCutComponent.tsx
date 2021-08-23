@@ -1,11 +1,11 @@
 import React from 'react'
 import PersonComponent from './PersonComponent'
 import { personInfo } from '../data/data'
-
+import "./ChimCutComponent.css"
 function ChimCutComponent() {
   return (
-    <div className="w-full bg-black-dark font-serif">
-      <div className="container mx-auto xl flex h-screen justify-center py-8">
+    <div className="wrapper">
+      <div className="container flex-col mx-auto xl flex h-screen items-center py-16">
         <div className="flex flex-wrap justify-center">
           {personInfo.map((item) => (
             <PersonComponent
@@ -16,6 +16,9 @@ function ChimCutComponent() {
             />
           ))}
         </div>
+        <footer className="flex mt-auto text-white text-4xl">
+          Made from us with love!
+        </footer>
       </div>
     </div>
   )

@@ -2,6 +2,7 @@ import React from 'react'
 import PersonComponent from './PersonComponent'
 import { personInfo } from '../data/data'
 import "./ChimCutComponent.css"
+
 function ChimCutComponent() {
   return (
     <div className="wrapper">

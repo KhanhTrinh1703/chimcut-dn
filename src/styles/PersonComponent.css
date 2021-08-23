@@ -1,0 +1,12 @@
+.person {
+  height: 100%;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar img {
+  width: 200px;
+  height: 200px;
+}

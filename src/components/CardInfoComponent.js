@@ -4,9 +4,7 @@ import PersonComponent from './PersonComponent'
 const CardInfoComponent = () => {
   return (
     <Fragment>
-      <PersonComponent
-        persons={persons}
-      ></PersonComponent>
+      <PersonComponent persons={persons}></PersonComponent>
     </Fragment>
   )
 }

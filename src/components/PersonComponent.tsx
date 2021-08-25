@@ -1,7 +1,13 @@
 import React, { Fragment } from 'react'
 import Countdown from 'react-countdown'
 import { Person } from '../types/person'
-import { AiFillGithub, AiFillFacebook, AiFillLinkedin, AiFillPhone, AiFillMail } from 'react-icons/ai'
+import {
+  AiFillGithub,
+  AiFillFacebook,
+  AiFillLinkedin,
+  AiFillPhone,
+  AiFillMail,
+} from 'react-icons/ai'
 import { FaAddressCard } from 'react-icons/fa'
 
 function PersonComponent(props: any) {
@@ -9,14 +15,16 @@ function PersonComponent(props: any) {
 
   return (
     <Fragment>
-      <div className="
+      <div
+        className="
           flex 
           md:w-2/5 
           w-full 
           m-2 
           bg-gray-light 
           rounded-2xl 
-          shadow-xl">
+          shadow-xl"
+      >
         <div className="flex flex-col bg-teal p-4 rounded-l-2xl flex-1 items-center">
           <div className="flex bg-teal p-1 rounded-full">
             <img src={avatar} alt={avatar} className="w-32 h-32 rounded-full" />

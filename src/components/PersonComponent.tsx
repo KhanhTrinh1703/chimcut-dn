@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import Countdown from 'react-countdown'
-import { Person } from '../types/person'
 import {
   AiFillGithub,
   AiFillFacebook,

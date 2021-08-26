@@ -1,4 +1,4 @@
-import * as IMAGE from '../images/image.js'
+import IMAGE from '../images/image.js'
 
 const personInfo = [
   {

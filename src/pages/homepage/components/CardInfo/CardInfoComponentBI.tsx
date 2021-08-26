@@ -16,9 +16,9 @@ const CardInfoComponentBI = () => {
             />
           ))}
         </div>
-        {/* <footer className="flex mt-auto text-white text-4xl">
+        <footer className="flex mt-auto text-white text-4xl">
           Made from us with love!
-        </footer> */}
+        </footer>
       </div>
     </div>
   )

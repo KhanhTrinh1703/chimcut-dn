@@ -1,6 +1,6 @@
 import React from 'react'
-
+import CardInfoComponentBI from './components/CardInfo/CardInfoComponentBI'
 const HomePage = () => {
-  return <div>This is homepage</div>
+  return <CardInfoComponentBI />
 }
 export default HomePage

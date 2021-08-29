@@ -1,6 +1,6 @@
 import React from 'react'
 import CardInfoComponent from './CardInfoComponent'
-import { personInfo } from '../../../../data/data'
+import { personInfo } from '../../../data/data'
 import CovidAnalystComponent from '../covid/CovidAnalystComponent'
 
 const CardInfoComponentBI = () => {

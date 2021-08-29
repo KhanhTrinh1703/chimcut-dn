@@ -38,18 +38,9 @@ const CardInfoComponent = (props: any) => {
 
   return (
     <Fragment>
-      <div
-        className="
-        flex 
-        md:w-2/5 
-        w-full 
-        m-2 
-        rounded-2xl 
-        shadow-xl
-        card-info"
-      >
-        <div className="flex flex-col p-4 rounded-l-2xl flex-1 items-center card-left-side">
-          <div className="flex bg-teal p-1 rounded-full">
+      <div className="card mb-4">
+        <div className="flex flex-col p-8 rounded-l-2xl flex-1 items-center card-left-side">
+          <div className="flex p-1 rounded-full">
             <img src={avatar} alt={avatar} className="w-32 h-32 rounded-full" />
           </div>
           <p className="uppercase font-semibold text-3xl mt-3">{name}</p>

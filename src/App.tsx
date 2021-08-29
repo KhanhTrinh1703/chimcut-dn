@@ -8,6 +8,9 @@ function App() {
       <div className="container">
         <HomePage />
       </div>
+      <footer className="flex mt-auto text-white text-4xl justify-center">
+        Made from us with love!
+      </footer>
     </div>
   )
 }

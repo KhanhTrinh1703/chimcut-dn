@@ -1,7 +1,9 @@
-.card-info {
+.card {
   background-color: #15042e;
   box-shadow: 0px 4px 20px rgba(150, 101, 253, 0.5);
   border-radius: 12px;
+  @apply flex
+    rounded-2xl;
 
   .card-left-side {
     background-color: #460a75;

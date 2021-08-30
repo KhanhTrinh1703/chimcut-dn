@@ -1,5 +1,5 @@
 
-export type Person = {
+export type PersonInfo = {
   id: string ,
   name: string,
   time: string,

@@ -1,0 +1,12 @@
+.wrapper {
+  @apply w-screen
+    min-h-screen;
+  background: url('./assets/background-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+  .container {
+    @apply text-white 
+      mx-auto
+      pt-16;
+  }
+}

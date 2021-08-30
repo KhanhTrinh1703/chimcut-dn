@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import CardInfoComponentBI from '@/components/homepageComponents/CardInfo/CardInfoComponentBI'
+import CardInfoComponentBI from '@components/homepageComponents/CardInfo/CardInfoComponentBI'
 import CovidAnalystComponent from '@components/homepageComponents/covid/CovidAnalystComponent'
 const HomePage = () => {
   return (

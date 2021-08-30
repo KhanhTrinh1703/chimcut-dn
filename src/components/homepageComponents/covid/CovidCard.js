@@ -1,16 +1,14 @@
 import React from 'react'
 import { AiOutlineArrowUp } from 'react-icons/ai'
 
-const CovidCard = (props) => {
-  const { patientData } = props
-
-  const _renderField = (title, quantity) => {
+const CovidCard = () => {
+  const _renderField = () => {
     return (
       <div className="flex flex-col p-4 rounded-2xl flex-1 items-center bg-gray-100 text-gray-900 w-32">
         <p className="text-md">{title}</p>
         <div className="flex flex-row text-2xl items-center font-bold mt-2">
           <AiOutlineArrowUp className="text-red-600"></AiOutlineArrowUp>
-          <p>{quantity}</p>
+          <p>12.456</p>
         </div>
       </div>
     )

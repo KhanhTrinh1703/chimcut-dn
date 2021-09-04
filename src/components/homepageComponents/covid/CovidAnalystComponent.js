@@ -6,6 +6,7 @@ const CovidAnalystComponent = () => {
   const [nationData, setNationData] = useState({})
   const [danangData, setDanangData] = useState({})
 
+  
   useEffect(() => {
     const funcCallAPI = async () => {
       const asyncSumPatient = postSumPatient()
@@ -42,16 +43,12 @@ const CovidAnalystComponent = () => {
     }
 
     funcCallAPI()
-  }, [nationData, danangData])
+  }, []) 
 
   return (
-    <div className="">
-      <div className="flex-col mx-auto xl flex items-center py-16">
-        <div className="flex flex-wrap justify-center">
-          <CovidCard patientData={nationData}></CovidCard>
-          <CovidCard patientData={danangData}></CovidCard>
-        </div>
-      </div>
+    <div className="flex-col mx-auto xl flex items-center py-10 px-10 card">
+      <CovidCard patientData={nationData} location="Ca nuoc"></CovidCard>
+      <CovidCard patientData={danangData} location="Da Nang"></CovidCard>
     </div>
   )
 }

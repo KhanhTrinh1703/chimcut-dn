@@ -43,7 +43,8 @@ const CovidAnalystComponent = () => {
     }
 
     funcCallAPI()
-  }, []) 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <div className="flex-col mx-auto xl flex items-center py-10 px-10 card">

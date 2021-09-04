@@ -11,7 +11,7 @@ import { FaAddressCard } from 'react-icons/fa'
 import './CardInfoComponent.scss'
 
 const CardInfoComponent = (props: any) => {
-  const { name, time, avatar } = props
+  const { name, time, avatar, phone, address, email } = props
 
   const _renderTimeCard = (time: string, type: string) => {
     return (
@@ -38,7 +38,7 @@ const CardInfoComponent = (props: any) => {
 
   return (
     <Fragment>
-      <div className="card mb-4">
+      <div className="card mb-4 w-full md:w-2/5">
         <div className="flex flex-col p-8 rounded-l-2xl flex-1 items-center card-left-side">
           <div className="flex p-1 rounded-full">
             <img src={avatar} alt={avatar} className="w-32 h-32 rounded-full" />
@@ -77,15 +77,15 @@ const CardInfoComponent = (props: any) => {
           <div className="mt-4">
             <div className="flex items-center mb-2">
               <AiFillPhone className="flex mr-2" />
-              <p className="flex">0813987652</p>
+              <p className="flex">{phone}</p>
             </div>
             <div className="flex items-center mb-2">
               <AiFillMail className="flex mr-2" />
-              <p className="flex">minhtoandut96@gmail.com</p>
+              <p className="flex">{email}</p>
             </div>
             <div className="flex items-center mb-2">
               <FaAddressCard className="flex mr-2" />
-              <p className="flex">88/51 Nguyen Duc Trung St.</p>
+              <p className="flex">{address}</p>
             </div>
           </div>
         </div>

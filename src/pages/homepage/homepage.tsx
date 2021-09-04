@@ -4,10 +4,12 @@ import CovidAnalystComponent from '@components/homepageComponents/covid/CovidAna
 const HomePage = () => {
   return (
     <Fragment>
-      <section className="flex info-section justify-evenly flex-wrap">
+      <section className="flex info-section justify-evenly flex-wrap content-around">
         <CardInfoComponentBI />
       </section>
-      <CovidAnalystComponent />
+      <section className="flex-col flex items-center">
+        <CovidAnalystComponent />
+      </section>
     </Fragment>
   )
 }

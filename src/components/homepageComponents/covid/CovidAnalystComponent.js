@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import CovidCard from './CovidCard'
 import { postSumPatient, postProvincesPatient } from '../../../api/covidAPI'
+import './covid.scss'
 
 const CovidAnalystComponent = () => {
   const [nationData, setNationData] = useState({})
@@ -47,7 +48,7 @@ const CovidAnalystComponent = () => {
   }, [])
 
   return (
-    <div className="flex-col mx-auto xl flex items-center py-10 px-10 card">
+    <div className="flex-col w-full md:w-auto md:mx-auto xl flex items-center py-5 px-5 covid-wrapper">
       <CovidCard patientData={nationData} location="Ca nuoc"></CovidCard>
       <CovidCard patientData={danangData} location="Da Nang"></CovidCard>
     </div>

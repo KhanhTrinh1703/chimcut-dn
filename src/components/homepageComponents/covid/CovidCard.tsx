@@ -1,10 +1,10 @@
 import React from 'react'
 import { AiOutlineArrowUp } from 'react-icons/ai'
+import { CovidCardProps } from '../../../types/covid'
 
-const CovidCard = (props) => {
-  const { patientData, location } = props
+const CovidCard = ({ patientData, location }: CovidCardProps) => {
 
-  const _renderField = (title, quantity) => {
+  const _renderField = (title: string, quantity: number) => {
     return (
       <div className="flex flex-col p-4 rounded-2xl flex-1 items-center bg-gray-100 text-gray-900 w-32">
         <p className="text-md">{title}</p>
@@ -19,9 +19,9 @@ const CovidCard = (props) => {
   const _renderFieldList = () => {
     return (
       <div className="flex flex-row space-x-4">
-        {_renderField('Số ca nhiễm', patientData?.newCase)}
-        {_renderField('Khỏi bệnh', patientData?.newRecovered)}
-        {_renderField('Tử vong', patientData?.newDeath)}
+        {_renderField('Số ca nhiễm', patientData.newCase)}
+        {_renderField('Khỏi bệnh', patientData.newRecovered)}
+        {_renderField('Tử vong', patientData.newDeath)}
       </div>
     )
   }

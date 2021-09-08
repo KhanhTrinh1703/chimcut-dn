@@ -8,7 +8,7 @@ const personInfo = [
     avatar: IMAGE?.MN,
     phone: '0765 050 289',
     address: 'K148/48 Y Lan Nguyen Phi St.',
-    email: 'tranvominhnhat@gmail.com'
+    email: 'tranvominhnhat@gmail.com',
   },
   {
     id: '2',
@@ -17,7 +17,7 @@ const personInfo = [
     avatar: IMAGE?.MT,
     phone: '0813 987 652',
     address: '88/51 Nguyen Duc Trung St.',
-    email: 'minhtoandut96@gmail.com'
+    email: 'minhtoandut96@gmail.com',
   },
   {
     id: '3',
@@ -26,7 +26,7 @@ const personInfo = [
     avatar: IMAGE?.KT,
     phone: '0374 628 314',
     address: 'K58/20 Ong Ich Khiem St',
-    email: 'khanhtrinh1703@gmail.com'
+    email: 'khanhtrinh1703@gmail.com',
   },
   {
     id: '4',
@@ -34,8 +34,8 @@ const personInfo = [
     endTime: '2023/02/01 00:00:00',
     avatar: IMAGE?.BD,
     phone: '0975 007 420',
-    address: '',
-    email: 'baodat96@gmail.com'
+    address: '73 Hà Tông Quyền St',
+    email: 'baodat96@gmail.com',
   },
 ]
 

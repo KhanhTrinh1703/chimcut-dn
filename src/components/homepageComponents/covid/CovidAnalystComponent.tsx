@@ -2,18 +2,19 @@ import React, { useEffect, useState } from 'react'
 import CovidCard from './CovidCard'
 import { postSumPatient, postProvincesPatient } from '../../../api/covidAPI'
 import './covid.scss'
+import { NationPatient, ProvincePatient } from '../../../types/covid'
 
 const CovidAnalystComponent = () => {
-  const [nationData, setNationData] = useState({})
-  const [danangData, setDanangData] = useState({})
+  const [nationData, setNationData] = useState<NationPatient>({} as NationPatient)
+  const [danangData, setDanangData] = useState<ProvincePatient>({} as ProvincePatient)
 
-  
+
   useEffect(() => {
     const funcCallAPI = async () => {
       const asyncSumPatient = postSumPatient()
       const asyncProvincesPatient = postProvincesPatient()
-      const sumPatientData = await asyncSumPatient
-      const provincesPatientData = await asyncProvincesPatient
+      const sumPatientData: any = await asyncSumPatient
+      const provincesPatientData: any = await asyncProvincesPatient
       if (sumPatientData?.success) {
         const sumPatientToday = sumPatientData?.data
         const sumPatientYesterday = sumPatientData?.dataL
@@ -24,21 +25,21 @@ const CovidAnalystComponent = () => {
         const newDeath = sumPatientToday?.Death - sumPatientYesterday?.Death
         setNationData({
           ...nationData,
-          newCase: newCase,
-          newRecovered: newRecovered,
-          newDeath: newDeath,
+          newCase: +newCase,
+          newRecovered: +newRecovered,
+          newDeath: +newDeath,
         })
       }
       if (provincesPatientData?.success) {
         const danang = provincesPatientData?.list.find(
-          (item) => item.id === 'VN-DN'
+          (item: any) => item.id === 'VN-DN'
         )
         setDanangData({
           ...danangData,
-          totalCases: danang?.confirmed,
-          newCase: danang?.incconfirmed,
+          totalCases: +danang?.confirmed,
+          newCase: +danang?.incconfirmed,
           newRecovered: 0,
-          newDeath: danang?.incdeath,
+          newDeath: +danang?.incdeath,
         })
       }
     }
